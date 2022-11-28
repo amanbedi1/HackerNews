@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar/Navbar";
+import Feed from "./components/Feed/Feed";
+import { SearchProvider } from "./searchContext";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ()=>{
+    return(
+        <SearchProvider>
+            <Navbar/>        
+            <Feed/>
+        </SearchProvider>
+    )
 }
 
 export default App;
